@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  background-color: var(--pale-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+button {
+  font-size: 0.8em;
+}
+
+.card {
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  text-align: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.card-img {
+  height: 150px;
+}
+
+.card-img img {
+  height: 100%;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.section-headings h1 {
+  color: var(--dark-blue);
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.section-headings p {
+  color: var(--desaturated-blue);
+  line-height: 20px;
+}
+
+.section-payment {
+  background-color: var(--very-pale-blue);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.middle {
+  margin-right: 20px;
+}
+
+.middle p:first-child {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.middle p:nth-child(2) {
+  color: var(--desaturated-blue);
+}
+
+.right button {
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: underline;
+  color: var(--bright-blue);
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+.right button:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--desaturated-blue);
+}
+
+.section-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-buttons button {
+  font-weight: 700;
+}
+
+.section-buttons button:nth-child(1) {
+  border: none;
+  outline: none;
+  background-color: var(--bright-blue);
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  transition: 0.5s ease;
+}
+
+.section-buttons button:nth-child(1):hover {
+  background-color: var(--desaturated-blue);
+  cursor: pointer;
+}
+
+.section-buttons button:nth-child(2) {
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--desaturated-blue);
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+footer p {
+  color: var(--dark-blue);
+}
+
+footer > p a {
+  color: var(--bright-blue);
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    background-image: url("/images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+}
